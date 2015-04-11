@@ -57,9 +57,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.listen(port, function(){
-  console.log('Listening on port %s', port);
-});
+app.set('port', (process.env.PORT || 5000));
 
 
 module.exports = app;
