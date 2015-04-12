@@ -9,7 +9,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 
 var app = express();
-var port = 4500;
+var default_port = 8080;
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -57,7 +57,7 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.set('port', (process.env.PORT || 5000));
+app.set('port', (process.env.PORT || default_port));
 
 
 module.exports = app;
