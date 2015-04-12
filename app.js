@@ -57,7 +57,4 @@ app.use(function(err, req, res, next) {
   });
 });
 
-app.set('port', (process.env.PORT || default_port));
-
-
 module.exports = app;
