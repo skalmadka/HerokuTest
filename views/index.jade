@@ -1,5 +1,57 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1= "NYC Taxi Data Mining"
+  p Graph Mining
+  br
+  p *Note: Pickup and dropoff "regions" have been determined by rounding off the lattitude and longitude positions to 1 digit after decimal.
+
+  br
+  .panel.panel-primary
+    .panel-heading
+      h3.panel-title Can we cluster regions based on the pickup/dropoff regions?
+    .panel-body
+      img(src='./images/all.png', height='400px', width='500px')
+  br
+  br
+  .panel.panel-primary
+    .panel-heading
+      h3.panel-title How do the clusters look for trips during the day (6AM to 3PM)?
+    .panel-body
+      table
+        thead
+          tr
+            th(data-field='title')
+              img(src='./images/morning.png', height='400px', width='500px')
+            th(data-field='link') 
+              img(src='./images/morning_r.png', height='400px', width='500px')
+
+  br
+  br
+  .panel.panel-primary
+    .panel-heading
+      h3.panel-title How do the clusters look for trips in the evening (4PM to 8PM)?
+    .panel-body
+      table
+        thead
+          tr
+            th(data-field='title')
+              img(src='./images/evening.png', height='400px', width='500px')
+            th(data-field='link')
+              img(src='./images/evening_r.png', height='400px', width='500px')
+
+  br
+  br
+  .panel.panel-primary
+    .panel-heading
+      h3.panel-title How do the clusters look for trips at night (9PM to 5AM)?
+    .panel-body
+      table
+        thead
+          tr
+            th(data-field='title')
+              img(src='./images/night.png', height='400px', width='500px')
+            th(data-field='link')
+              img(src='./images/night_r.png', height='400px', width='500px')
+
+  br
